@@ -284,3 +284,33 @@ footer {
     display: none;
   }
 }
+
+.install p + p {
+  margin-top: 12px;
+}
+.command {
+  position: relative;
+}
+.command pre {
+  padding-right: 92px;
+}
+.command code {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.copy {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid #343943;
+  background: #20242b;
+  color: var(--text);
+  font: 600 13px system-ui, sans-serif;
+  cursor: pointer;
+}
+.copy:hover {
+  background: #2b3139;
+}

@@ -136,16 +136,20 @@
 
     <section id="install" class="install">
       <h2>Install</h2>
-      <p>You need macOS, Node 22.23 or later, Python 3, and the <a href="https://www.npmjs.com/package/@earendil-works/pi-coding-agent">Pi</a> CLI signed in to a model provider.</p>
-      <pre><code>git clone https://github.com/agentmuster/muster
-cd muster
-npm install
-python3 -m pip install -r requirements.txt
-npm run build
-npm start</code></pre>
+      <div class="command">
+        <pre><code id="install-command">curl -fsSL https://agentmuster.io/install.sh | bash</code></pre>
+        <button type="button" class="copy" data-copy="install-command">Copy</button>
+      </div>
       <p>
-        Then open <code>http://127.0.0.1:47831</code>. The <a href="https://github.com/agentmuster/muster#readme">README</a> covers sign-in,
-        remote access and modules.
+        You need macOS, git, Node 22.23 or later, Python 3.9 or later, and the
+        <a href="https://www.npmjs.com/package/@earendil-works/pi-coding-agent">Pi</a> CLI signed in to a model provider.
+        The installer checks for them first and tells you what's missing; it doesn't install them for you.
+      </p>
+      <p>
+        It sets Muster up in <code>~/.muster</code>, starts it at login and prints the address,
+        <code>http://127.0.0.1:47831</code>. Run it again to update. The
+        <a href="https://github.com/agentmuster/muster/blob/main/install.sh">script</a> is on GitHub if you'd like to read it first, and the
+        <a href="https://github.com/agentmuster/muster#readme">README</a> covers sign-in, remote access and modules.
       </p>
     </section>
 
@@ -168,5 +172,14 @@ npm start</code></pre>
       <a href="https://github.com/agentmuster/muster/blob/main/SECURITY.md">Security</a>
     </nav>
   </footer>
+  <script>
+    for (const button of document.querySelectorAll('[data-copy]')) {
+      button.addEventListener('click', async () => {
+        await navigator.clipboard.writeText(document.getElementById(button.dataset.copy).textContent);
+        button.textContent = 'Copied';
+        setTimeout(() => (button.textContent = 'Copy'), 1500);
+      });
+    }
+  </script>
 </body>
 </html>
