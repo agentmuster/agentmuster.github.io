@@ -4,8 +4,8 @@
 main() {
   set -euo pipefail
   local script
-  script="$(mktemp -t muster-install.XXXXXX)"
-  trap 'rm -f "$script"' EXIT
+  script="$(mktemp "${TMPDIR:-/tmp}/muster-install.XXXXXX")"
+  trap "rm -f '$script'" EXIT
   curl -fsSL "https://raw.githubusercontent.com/agentmuster/muster/${MUSTER_REF:-main}/install.sh" -o "$script"
   bash "$script" "$@"
 }
