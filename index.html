@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muster · All your coding agents, in one place</title>
+  <meta name="description" content="A web app for Pi agents that runs on your own computer. Every Pi, Claude Code and Codex session becomes context your agents can use, reachable from your phone. MIT licensed." />
+  <meta name="theme-color" content="#101216" />
+  <link rel="canonical" href="https://agentmuster.com/" />
+  <link rel="icon" href="/images/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://agentmuster.com/" />
+  <meta property="og:title" content="Muster · All your coding agents, in one place" />
+  <meta property="og:description" content="Search Pi, Claude Code and Codex sessions, run agents from your phone, and review their pull requests. Free and open source." />
+  <meta property="og:image" content="https://agentmuster.com/images/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/"><img src="/images/icon-192.png" alt="" width="32" height="32" /> Muster</a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#install">Install</a>
+      <a href="https://github.com/agentmuster/muster-modules">Modules</a>
+      <a class="github" href="https://github.com/agentmuster/muster">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>All your coding agents, <span>in one place.</span></h1>
+        <p class="lead">
+          Muster is a web app for Pi agents that runs on your own computer. Every Pi, Claude Code and Codex session you've had becomes
+          something your agents can search and build on, and you can reach all of it from your phone, wherever you are.
+        </p>
+        <div class="cta">
+          <a class="button primary" href="https://github.com/agentmuster/muster">View on GitHub</a>
+          <a class="button" href="#install">Install</a>
+        </div>
+        <p class="small">MIT licensed. Early days: macOS first.</p>
+      </div>
+      <figure class="phone hero-phone">
+        <img src="/images/thread.webp" alt="A Muster thread on a phone: the agent explains why an export dropped 64 accounts and links the pull request it opened." width="390" height="844" />
+      </figure>
+    </section>
+
+    <section id="features" class="pillars" aria-label="Highlights">
+      <article>
+        <span class="num">01</span>
+        <h2>Everything runs locally</h2>
+        <p>
+          Muster, your sessions and their search index stay on your computer. It listens only on your own machine, and there's no Muster
+          server or account. Model requests go to the provider you set up in Pi.
+        </p>
+      </article>
+      <article>
+        <span class="num">02</span>
+        <h2>Every session at your agent's disposal</h2>
+        <p>
+          Muster indexes all your Pi, Claude Code and Codex sessions. It hands the relevant ones to a new thread as cited context, your
+          agents can search them while they work, and you can continue or branch any of them.
+        </p>
+      </article>
+      <article>
+        <span class="num">03</span>
+        <h2>Built for Pi, reachable from anywhere</h2>
+        <p>
+          Threads run through Pi with your own models, extensions, skills, subagents and workflows. Reach Muster from your phone through a
+          tunnel you control; it installs as an app.
+        </p>
+      </article>
+      <article>
+        <span class="num">04</span>
+        <h2>An interface you can extend</h2>
+        <p>
+          Modules add to the app itself: actions with a preview, Inbox feeds, tools for the agent, and review panels. Browse and install
+          them in the app, or write your own in TypeScript.
+        </p>
+      </article>
+      <article>
+        <span class="num">05</span>
+        <h2>Open source, MIT</h2>
+        <p>
+          Free to use, change and ship. The app and its modules are on
+          <a href="https://github.com/agentmuster/muster">GitHub</a>.
+        </p>
+      </article>
+    </section>
+
+    <section class="features" aria-label="What you can do">
+      <article>
+        <h2>Review and merge in the session</h2>
+        <p>
+          When the agent opens a pull request, read the diff file by file, mark it reviewed and merge, without opening your code host.
+          Your sign-off is pinned to the exact commits, so a later push needs another look. Bitbucket today.
+        </p>
+      </article>
+      <article>
+        <h2>Teams requests in one Inbox</h2>
+        <p>
+          Teams messages meant for you are grouped into requests, each with what someone needs and the messages behind it. Thanks and
+          FYIs stay out of the way. Start a session from any request.
+        </p>
+      </article>
+      <article>
+        <h2>Stay in the loop on your phone</h2>
+        <p>
+          Queue messages, follow background subagents and workflows, answer the agent's questions, and get a notification when a reply is
+          ready. A terminal is there when you need one.
+        </p>
+      </article>
+      <article>
+        <h2>Take over the browser</h2>
+        <p>
+          With BrowserOS, when the agent hits a sign-in, a one-time code or a CAPTCHA, it pauses and hands you its browser, live, on
+          whatever device you're holding.
+        </p>
+      </article>
+    </section>
+
+    <section class="shots" aria-label="Screenshots">
+      <figure class="phone">
+        <img src="/images/inbox.webp" alt="The Inbox: Teams messages grouped into requests, with an urgent one first." width="390" height="844" loading="lazy" />
+        <figcaption>The Inbox groups messages into requests.</figcaption>
+      </figure>
+      <figure class="phone">
+        <img src="/images/review.webp" alt="Reviewing a pull request's diff in a session, file by file." width="390" height="844" loading="lazy" />
+        <figcaption>Review the agent's PR without leaving the session.</figcaption>
+      </figure>
+    </section>
+
+
+    <section id="install" class="install">
+      <h2>Install</h2>
+      <p>You need macOS, Node 22.23 or later, Python 3, and the <a href="https://www.npmjs.com/package/@earendil-works/pi-coding-agent">Pi</a> CLI signed in to a model provider.</p>
+      <pre><code>git clone https://github.com/agentmuster/muster
+cd muster
+npm install
+python3 -m pip install -r requirements.txt
+npm run build
+npm start</code></pre>
+      <p>
+        Then open <code>http://127.0.0.1:47831</code>. The <a href="https://github.com/agentmuster/muster#readme">README</a> covers sign-in,
+        remote access and modules.
+      </p>
+    </section>
+
+    <section class="modules">
+      <h2>Write a module</h2>
+      <p>
+        A module is a folder with a manifest and a TypeScript file. It can add actions with a preview, Inbox feeds, tools for the agent,
+        or a pull-request provider for your code host. Start from the template in
+        <a href="https://github.com/agentmuster/muster-modules">muster-modules</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="/"><img src="/images/icon-192.png" alt="" width="24" height="24" /> Muster</a>
+    <nav>
+      <a href="https://github.com/agentmuster/muster">GitHub</a>
+      <a href="https://github.com/agentmuster/muster-modules">Modules</a>
+      <a href="https://github.com/agentmuster/muster/blob/main/LICENSE">MIT License</a>
+      <a href="https://github.com/agentmuster/muster/blob/main/SECURITY.md">Security</a>
+    </nav>
+  </footer>
+</body>
+</html>
